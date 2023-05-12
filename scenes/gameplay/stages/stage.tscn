@@ -1,11 +1,20 @@
-[gd_scene load_steps=5 format=3 uid="uid://cbld2pm6f27au"]
+[gd_scene load_steps=9 format=3 uid="uid://cbld2pm6f27au"]
 
 [ext_resource type="Script" path="res://scripts/Stage.gd" id="1_kglcc"]
 [ext_resource type="Texture2D" uid="uid://bf0pjitkjn6tp" path="res://assets/images/gameplay/stages/stage/stageback.png" id="2_y78mw"]
 [ext_resource type="Texture2D" uid="uid://yjeat30yq2eo" path="res://assets/images/gameplay/stages/stage/stagefront.png" id="3_ac72p"]
 [ext_resource type="Texture2D" uid="uid://b1felplvm5ir" path="res://assets/images/gameplay/stages/stage/stagecurtains.png" id="4_gk1p1"]
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_6ghq4"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_fjqqj"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_d21nu"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_b2olc"]
+
 [node name="stage" type="Node2D"]
+material = SubResource("ShaderMaterial_6ghq4")
 script = ExtResource("1_kglcc")
 default_cam_zoom = 0.9
 
@@ -15,11 +24,15 @@ default_cam_zoom = 0.9
 motion_scale = Vector2(0.9, 0.9)
 
 [node name="Sprite2D" type="Sprite2D" parent="PB/PL1"]
+material = SubResource("ShaderMaterial_fjqqj")
+use_parent_material = true
 position = Vector2(-600, -200)
 texture = ExtResource("2_y78mw")
 centered = false
 
 [node name="Sprite2D2" type="Sprite2D" parent="PB/PL1"]
+material = SubResource("ShaderMaterial_d21nu")
+use_parent_material = true
 position = Vector2(-652, 600)
 scale = Vector2(1.1, 1.1)
 texture = ExtResource("3_ac72p")
@@ -29,6 +42,8 @@ centered = false
 motion_scale = Vector2(1.3, 1.3)
 
 [node name="Sprite2D" type="Sprite2D" parent="PB/PL2"]
+material = SubResource("ShaderMaterial_b2olc")
+use_parent_material = true
 position = Vector2(-500, -300)
 scale = Vector2(0.9, 0.9)
 texture = ExtResource("4_gk1p1")

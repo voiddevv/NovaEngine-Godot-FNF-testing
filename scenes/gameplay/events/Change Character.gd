@@ -14,6 +14,7 @@ func change_char() -> void:
 	var character_path:String = "res://scenes/gameplay/characters/" + parameters[1] + ".tscn"
 	if !ResourceLoader.exists(character_path):
 		printerr("Character Not Found: " + character_path)
+		queue_free()
 		return
 	var old_character:Character
 	var new_character:Character = load(character_path).instantiate()
