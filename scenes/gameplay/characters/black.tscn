@@ -8,7 +8,7 @@
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_4sv0f"]
 shader = ExtResource("3_13b12")
-shader_parameter/SPEED = 3.5
+shader_parameter/speed = 8.0
 
 [sub_resource type="Animation" id="Animation_epq6v"]
 resource_name = "idle"
@@ -297,4 +297,4 @@ libraries = {
 }
 
 [node name="CameraPos" type="Node2D" parent="."]
-position = Vector2(604, -376)
+position = Vector2(556, -500)

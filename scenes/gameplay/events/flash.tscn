@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://cqun3xlegn6et"]
+
+[ext_resource type="Script" path="res://scenes/gameplay/events/flash.gd" id="1_lq26x"]
+
+[node name="flash" type="Node"]
+script = ExtResource("1_lq26x")
