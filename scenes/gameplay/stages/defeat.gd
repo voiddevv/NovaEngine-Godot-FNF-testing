@@ -13,6 +13,10 @@ func _process(delta):
 
 func on_beat_hit(beat:int):
 	match beat:
+		68:
+			pb2.visible = true
+			for node in [$PB/PL1, $PB/PL2]:
+				node.visible = true
 		292,360:
 			defeatfnf.visible = !defeatfnf.visible
 			pb2.visible = !pb2.visible
