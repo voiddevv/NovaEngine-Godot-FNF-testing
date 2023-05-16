@@ -1,8 +1,7 @@
-[gd_scene load_steps=11 format=3 uid="uid://ce7ytphun8aq5"]
+[gd_scene load_steps=10 format=3 uid="uid://ce7ytphun8aq5"]
 
 [ext_resource type="Script" path="res://scenes/gameplay/stages/defeat.gd" id="1_454d6"]
 [ext_resource type="Texture2D" uid="uid://bjbk5nf22lqde" path="res://assets/images/gameplay/stages/defeat/defeatfnf.png" id="2_ei0qr"]
-[ext_resource type="Shader" path="res://scenes/gameplay/stages/lighten.gdshader" id="2_gyvyq"]
 [ext_resource type="SpriteFrames" uid="uid://6xuemv4b3sxf" path="res://assets/images/gameplay/stages/defeat/defeat.res" id="2_qg1vq"]
 [ext_resource type="Script" path="res://classes/AnimatedSprite.gd" id="3_cxvw7"]
 [ext_resource type="Texture2D" uid="uid://fbdm8o2lhdi0" path="res://assets/images/gameplay/stages/defeat/lol thing.png" id="4_v6we2"]
@@ -11,8 +10,8 @@
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_6ghq4"]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_04sjn"]
-shader = ExtResource("2_gyvyq")
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_8ryjm"]
+blend_mode = 4
 
 [node name="defeat" type="Node2D"]
 material = SubResource("ShaderMaterial_6ghq4")
@@ -27,7 +26,7 @@ scale = Vector2(1.3, 1.3)
 motion_scale = Vector2(0.8, 0.8)
 
 [node name="bg" type="AnimatedSprite2D" parent="PB/PL1"]
-material = SubResource("ShaderMaterial_04sjn")
+material = SubResource("CanvasItemMaterial_8ryjm")
 position = Vector2(640, 360)
 sprite_frames = ExtResource("2_qg1vq")
 animation = &"defeat"
@@ -71,10 +70,10 @@ texture = ExtResource("7_nmiaq")
 [node name="Character Positions" type="Node2D" parent="."]
 
 [node name="Opponent" type="Node2D" parent="Character Positions"]
-position = Vector2(19, 988)
+position = Vector2(336, 988)
 
 [node name="Spectator" type="Node2D" parent="Character Positions"]
 position = Vector2(510, 659)
 
 [node name="Player" type="Node2D" parent="Character Positions"]
-position = Vector2(1372, 988)
+position = Vector2(1300, 988)

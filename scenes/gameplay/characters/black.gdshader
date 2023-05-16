@@ -1,5 +1,6 @@
 shader_type canvas_item;
 uniform float speed; 
 void fragment(){
-	COLOR.r /= 0.70 - sin(TIME*speed + VERTEX.x/VERTEX.y)*0.1;
+	if(COLOR.b > 0.2)
+		COLOR.r /= abs(fract(TIME*speed + SCREEN_UV.x + SCREEN_UV.y));
 }

@@ -8,7 +8,7 @@
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_4sv0f"]
 shader = ExtResource("3_13b12")
-shader_parameter/speed = 8.0
+shader_parameter/speed = 1.0
 
 [sub_resource type="Animation" id="Animation_epq6v"]
 resource_name = "idle"
@@ -283,7 +283,7 @@ health_color = Color(0.686275, 0.4, 0.807843, 1)
 
 [node name="AnimatedSprite" type="AnimatedSprite2D" parent="."]
 material = SubResource("ShaderMaterial_4sv0f")
-position = Vector2(0, -720)
+position = Vector2(-360, -720)
 sprite_frames = ExtResource("3_lsk7g")
 animation = &"idle"
 frame = 24
@@ -297,4 +297,4 @@ libraries = {
 }
 
 [node name="CameraPos" type="Node2D" parent="."]
-position = Vector2(556, -500)
+position = Vector2(196, -500)

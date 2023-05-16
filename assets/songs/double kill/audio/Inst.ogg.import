@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cut3ntvajh87u"
+path="res://.godot/imported/Inst.ogg-fcb4a2dd51fd67a4a6beabe02e822a33.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/songs/double kill/audio/Inst.ogg"
+dest_files=["res://.godot/imported/Inst.ogg-fcb4a2dd51fd67a4a6beabe02e822a33.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
