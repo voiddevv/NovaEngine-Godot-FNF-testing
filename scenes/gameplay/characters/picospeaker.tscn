@@ -1,13 +1,12 @@
-[gd_scene load_steps=11 format=3 uid="uid://jsyj8ha2357m"]
+[gd_scene load_steps=9 format=3 uid="uid://wenqf7p5udgm"]
 
-[ext_resource type="Script" path="res://scripts/Character.gd" id="1_qra5c"]
-[ext_resource type="Texture2D" uid="uid://dybbcb7jsxcqk" path="res://assets/images/gameplay/icons/icon-monster.png" id="2_eg3il"]
-[ext_resource type="SpriteFrames" uid="uid://cdk6pw8e2w0ns" path="res://assets/images/gameplay/characters/monster/normal.res" id="3_ui5nj"]
-[ext_resource type="Script" path="res://classes/AnimatedSprite.gd" id="4_3dnx0"]
+[ext_resource type="Script" path="res://scenes/gameplay/characters/picospeaker.gd" id="1_acd4u"]
+[ext_resource type="SpriteFrames" path="res://assets/images/gameplay/characters/pico/speaker.res" id="3_a7ohd"]
+[ext_resource type="Script" path="res://classes/AnimatedSprite.gd" id="4_img30"]
 
-[sub_resource type="Animation" id="Animation_epq6v"]
-resource_name = "idle"
-length = 0.625004
+[sub_resource type="Animation" id="Animation_wvy3m"]
+resource_name = "shoot1"
+length = 0.208338
 step = 0.0416667
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -19,7 +18,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [&"monster idle"]
+"values": [&"Pico shoot 1"]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -43,7 +42,7 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(0, 0)]
+"values": [Vector2(0, 10)]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
@@ -58,8 +57,10 @@ tracks/3/keys = {
 "values": [true]
 }
 
-[sub_resource type="Animation" id="Animation_8yhx3"]
-resource_name = "singDOWN"
+[sub_resource type="Animation" id="Animation_a8har"]
+resource_name = "shoot12"
+length = 0.208338
+step = 0.0416667
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -70,7 +71,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [&"monster down"]
+"values": [&"Pico shoot 2"]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -94,7 +95,7 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(40, 90)]
+"values": [Vector2(0, 138)]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
@@ -109,8 +110,10 @@ tracks/3/keys = {
 "values": [true]
 }
 
-[sub_resource type="Animation" id="Animation_4fmcm"]
-resource_name = "singLEFT"
+[sub_resource type="Animation" id="Animation_o3435"]
+resource_name = "shoot3"
+length = 0.208338
+step = 0.0416667
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -121,7 +124,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [&"Monster Right note"]
+"values": [&"Pico shoot 3"]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -145,7 +148,7 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(40, -20)]
+"values": [Vector2(-413, 74)]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
@@ -160,8 +163,10 @@ tracks/3/keys = {
 "values": [true]
 }
 
-[sub_resource type="Animation" id="Animation_yk1cf"]
-resource_name = "singRIGHT"
+[sub_resource type="Animation" id="Animation_6wbnx"]
+resource_name = "shoot4"
+length = 0.208338
+step = 0.0416667
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -172,7 +177,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [&"Monster left note"]
+"values": [&"Pico shoot 4"]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -196,58 +201,7 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(40, 0)]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath(".:playing")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
-}
-
-[sub_resource type="Animation" id="Animation_55yur"]
-resource_name = "singUP"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:animation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [&"monster up note"]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath(".:frame")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [0]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath(".:offset")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(20, -90)]
+"values": [Vector2(-440, 28.2)]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
@@ -264,26 +218,26 @@ tracks/3/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_vgtrv"]
 _data = {
-"idle": SubResource("Animation_epq6v"),
-"singDOWN": SubResource("Animation_8yhx3"),
-"singLEFT": SubResource("Animation_4fmcm"),
-"singRIGHT": SubResource("Animation_yk1cf"),
-"singUP": SubResource("Animation_55yur")
+"shoot1": SubResource("Animation_wvy3m"),
+"shoot2": SubResource("Animation_a8har"),
+"shoot3": SubResource("Animation_o3435"),
+"shoot4": SubResource("Animation_6wbnx")
 }
 
-[node name="monster" type="Node2D"]
-script = ExtResource("1_qra5c")
-health_icon = ExtResource("2_eg3il")
-health_color = Color(0.952941, 1, 0.431373, 1)
+[node name="picospeaker" type="Node2D"]
+script = ExtResource("1_acd4u")
+dance_steps = Array[String]([""])
+health_color = Color(0.647059, 0, 0.301961, 1)
 
 [node name="AnimatedSprite" type="AnimatedSprite2D" parent="."]
-position = Vector2(-240, -677)
-sprite_frames = ExtResource("3_ui5nj")
-animation = &"monster idle"
-frame = 14
+position = Vector2(-368, -800)
+sprite_frames = ExtResource("3_a7ohd")
+animation = &"Pico shoot 1"
+frame = 25
 frame_progress = 1.0
 centered = false
-script = ExtResource("4_3dnx0")
+offset = Vector2(0, 10)
+script = ExtResource("4_img30")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatedSprite"]
 libraries = {
@@ -291,4 +245,4 @@ libraries = {
 }
 
 [node name="CameraPos" type="Node2D" parent="."]
-position = Vector2(228, -433)
+position = Vector2(-35, -477)

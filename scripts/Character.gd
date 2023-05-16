@@ -1,5 +1,4 @@
-extends Node2D
-class_name Character
+class_name Character extends Node2D
 
 @export_group("General Info")
 @export var is_player:bool = false
@@ -57,14 +56,13 @@ func get_midpoint():
 	return Vector2(position.x + anim_sprite.position.x + initial_size.x * 0.5, position.y + anim_sprite.position.y + initial_size.y * 0.5)
 	
 func get_camera_pos():
-	var p:Vector2 = position + camera_pos.position
+	var p:Vector2 = camera_pos.global_position
 	if is_player != _is_true_player:
 		p.x += 850
 		
-	p.x += anim_sprite.position.x
 		
 	return p
-	
+
 func _process(delta):
 	if anim_timer > 0.0:
 		anim_timer -= delta
@@ -109,7 +107,6 @@ func play_anim(anim:String, force:bool = false):
 	if force or last_anim != anim or anim_finished:
 		if last_anim == anim:
 			anim_player.seek(0.0)
-			anim_sprite.frame = 0
 			
 		last_anim = anim
 		anim_finished = false
