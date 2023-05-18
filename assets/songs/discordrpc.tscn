@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dyyxngi1u2c7u"]
+
+[ext_resource type="Script" path="res://assets/songs/discordrpc.gd" id="1_h4fgq"]
+
+[node name="discordrpc" type="Node"]
+script = ExtResource("1_h4fgq")

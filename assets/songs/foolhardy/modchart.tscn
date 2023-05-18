@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://cvvkxs5xpcb2b"]
+
+[ext_resource type="Script" path="res://assets/songs/foolhardy/modchart.gd" id="1_0bb2b"]
+
+[node name="modchart" type="Node"]
+script = ExtResource("1_0bb2b")

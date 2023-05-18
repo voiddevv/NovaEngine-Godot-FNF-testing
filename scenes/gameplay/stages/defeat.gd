@@ -3,6 +3,7 @@ extends Stage
 @onready var defeatfnf = $PB/PL3/Defeatfnf
 @onready var pb2 = $PB2
 
+
 # Called when the node enters the scene tree for the first time.
 func _ready_post():
 	game.spectator.queue_free()
