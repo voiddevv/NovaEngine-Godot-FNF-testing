@@ -3,7 +3,7 @@ var shakeing:bool = false
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta):
 	if shakeing:
-		game.opponent.modulate.a = abs(sin(Conductor.position/1000.0))
+		game.opponent.modulate.a = 0.6 +abs(sin(Conductor.position/1000.0*4.0))
 		game.camera.offset.x = randf_range(-15,15)
 		game.camera.offset.y = randf_range(-15,15)
 	else:

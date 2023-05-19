@@ -1,0 +1,29 @@
+{
+	"song": {
+		"speed": 3.2,
+		"stage": "theCorridor",
+		"player1": "bf-distrust",
+		"player2": "distrustsans",
+		"player3": null,
+		"events": [
+			[
+				271250.000000001,
+				[
+					[
+						"Change Character",
+						"pap",
+						"pixelpaps"
+					]
+				]
+			]
+		],
+		"notes": [],
+		"splashSkin": "noteSplashes",
+		"validScore": false,
+		"gfVersion": "gf",
+		"bpm": 180,
+		"arrowSkin": "",
+		"needsVoices": true,
+		"song": "humerus"
+	}
+}

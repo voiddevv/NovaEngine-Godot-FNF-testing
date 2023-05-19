@@ -1,0 +1,31 @@
+[gd_scene load_steps=4 format=3 uid="uid://ccghkyahfujot"]
+
+[ext_resource type="Script" path="res://scripts/Stage.gd" id="1_3aw82"]
+[ext_resource type="SpriteFrames" uid="uid://cmfdnk5g3ux1k" path="res://assets/images/gameplay/stages/balls whit/BallisticBackground.res" id="2_koi5p"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_6ghq4"]
+
+[node name="ballisticAlley" type="Node2D"]
+material = SubResource("ShaderMaterial_6ghq4")
+script = ExtResource("1_3aw82")
+default_cam_zoom = 0.9
+
+[node name="PB" type="ParallaxBackground" parent="."]
+
+[node name="BG" type="ParallaxLayer" parent="PB"]
+
+[node name="bg" type="AnimatedSprite2D" parent="PB/BG"]
+position = Vector2(640, 360)
+sprite_frames = ExtResource("2_koi5p")
+animation = &"Background Whitty Moving"
+
+[node name="Character Positions" type="Node2D" parent="."]
+
+[node name="Opponent" type="Node2D" parent="Character Positions"]
+position = Vector2(330, 820)
+
+[node name="Spectator" type="Node2D" parent="Character Positions"]
+position = Vector2(749.5, 764)
+
+[node name="Player" type="Node2D" parent="Character Positions"]
+position = Vector2(973, 820)

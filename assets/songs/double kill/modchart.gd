@@ -26,16 +26,28 @@ func _process(delta):
 			"Opponent Two":
 				ohgod(game.event_data_array[0].parameters[0])
 				game.event_data_array.pop_front()
+			"Both Opponents":
+				ohgod2(game.event_data_array[0].parameters[0])
 
 
 func ohgod(char:String):
+	print(int(char))
 	match char:
-		"1":
-			dads = [black]
-			print("black")
+	
 		"0":
 			dads = [ogdad]
 			print("white")
+		_:
+			dads = [black]
+			print("black")
+func ohgod2(char:String):
+	print(int(char))
+	match char:
+
+		"0":
+			dads = [ogdad]
+		_:
+			dads = [black,ogdad]
 	game.update_camera(Conductor.cur_section)
 func on_beat_hit(beat:int):
 	for char in [black,ogdad]:

@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="FreeplaySongList" load_steps=41 format=3 uid="uid://rkmusgpraddm"]
+[gd_resource type="Resource" script_class="FreeplaySongList" load_steps=45 format=3 uid="uid://rkmusgpraddm"]
 
 [ext_resource type="Script" path="res://resources/FreeplaySongList.gd" id="1_sxs7f"]
 [ext_resource type="Script" path="res://resources/FreeplaySong.gd" id="2_7bcx6"]
@@ -242,6 +242,35 @@ icon_frames = 2
 difficulties = Array[String](["easy", "normal", "hard"])
 bg_color = Color(1, 1, 1, 1)
 
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ful1h"]
+
+[sub_resource type="Resource" id="Resource_go4di"]
+script = ExtResource("2_7bcx6")
+song = "finale"
+display_name = ""
+character_icon = SubResource("CompressedTexture2D_ful1h")
+icon_frames = 2
+difficulties = Array[String](["easy", "normal", "hard"])
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="Resource" id="Resource_6kary"]
+script = ExtResource("2_7bcx6")
+song = "ballistic-old"
+display_name = ""
+character_icon = ExtResource("14_n8i4t")
+icon_frames = 2
+difficulties = Array[String](["easy", "normal", "hard"])
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="Resource" id="Resource_mlgrt"]
+script = ExtResource("2_7bcx6")
+song = "humerus"
+display_name = ""
+character_icon = ExtResource("14_n8i4t")
+icon_frames = 2
+difficulties = Array[String](["medium", "normal", "fromage"])
+bg_color = Color(0, 1, 1, 1)
+
 [resource]
 script = ExtResource("1_sxs7f")
-songs = Array[ExtResource("2_7bcx6")]([SubResource("Resource_ykqdk"), SubResource("Resource_es7uv"), SubResource("Resource_oie4e"), SubResource("Resource_s18hq"), SubResource("Resource_6p6kd"), SubResource("Resource_pbguj"), SubResource("Resource_1pj6y"), SubResource("Resource_lvts5"), SubResource("Resource_jarqo"), SubResource("Resource_gg5vo"), SubResource("Resource_jdlsf"), SubResource("Resource_0i7rf"), SubResource("Resource_6oprx"), SubResource("Resource_vr8a0"), SubResource("Resource_x0vrg"), SubResource("Resource_yj7n3"), SubResource("Resource_qxapp"), SubResource("Resource_bqfb4"), SubResource("Resource_tkrbf"), SubResource("Resource_udhbh"), SubResource("Resource_pd4xj"), SubResource("Resource_hwdua"), SubResource("Resource_418yo"), SubResource("Resource_20bxp"), SubResource("Resource_y166x")])
+songs = Array[ExtResource("2_7bcx6")]([SubResource("Resource_ykqdk"), SubResource("Resource_es7uv"), SubResource("Resource_oie4e"), SubResource("Resource_s18hq"), SubResource("Resource_6p6kd"), SubResource("Resource_pbguj"), SubResource("Resource_1pj6y"), SubResource("Resource_lvts5"), SubResource("Resource_jarqo"), SubResource("Resource_gg5vo"), SubResource("Resource_jdlsf"), SubResource("Resource_0i7rf"), SubResource("Resource_6oprx"), SubResource("Resource_vr8a0"), SubResource("Resource_x0vrg"), SubResource("Resource_yj7n3"), SubResource("Resource_qxapp"), SubResource("Resource_bqfb4"), SubResource("Resource_tkrbf"), SubResource("Resource_udhbh"), SubResource("Resource_pd4xj"), SubResource("Resource_hwdua"), SubResource("Resource_418yo"), SubResource("Resource_20bxp"), SubResource("Resource_y166x"), SubResource("Resource_go4di"), SubResource("Resource_6kary"), SubResource("Resource_mlgrt")])

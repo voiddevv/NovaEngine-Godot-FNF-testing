@@ -4,6 +4,7 @@ var discord := DiscordRPC.new()
 
 # Called when the node enters the scene tree for the first time.
 func _ready_post():
+	# PISSING
 	add_child(discord)
 	discord.establish_connection(1108818151912771675)
 	discord.rpc_ready.connect(

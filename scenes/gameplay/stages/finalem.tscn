@@ -1,0 +1,71 @@
+[gd_scene load_steps=11 format=3 uid="uid://dr6qhq0tfso8t"]
+
+[ext_resource type="Script" path="res://scenes/gameplay/stages/finalem.gd" id="1_6bd85"]
+[ext_resource type="Texture2D" uid="uid://kfyeauneovda" path="res://assets/images/gameplay/stages/finalem/bg.png" id="2_pe30s"]
+[ext_resource type="Texture2D" uid="uid://brm0jchu8q5ra" path="res://assets/images/gameplay/stages/finalem/bgg.png" id="3_qsm1i"]
+[ext_resource type="Texture2D" uid="uid://4smhkci41psh" path="res://assets/images/gameplay/stages/finalem/dark.png" id="4_bay8w"]
+[ext_resource type="Texture2D" uid="uid://dw7wss1dqlh2u" path="res://assets/images/gameplay/stages/finalem/dead.png" id="5_j7pqb"]
+[ext_resource type="Texture2D" uid="uid://ddkponbqmmkjn" path="res://assets/images/gameplay/stages/finalem/fore.png" id="6_klidr"]
+[ext_resource type="Texture2D" uid="uid://b23ad6328h1q5" path="res://assets/images/gameplay/stages/finalem/lamp.png" id="7_xwydh"]
+[ext_resource type="Texture2D" uid="uid://drxn3qsakbksh" path="res://assets/images/gameplay/stages/finalem/splat.png" id="8_o3rij"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_6ghq4"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_ovd4w"]
+blend_mode = 4
+
+[node name="stage" type="Node2D"]
+material = SubResource("ShaderMaterial_6ghq4")
+script = ExtResource("1_6bd85")
+default_cam_zoom = 0.7
+
+[node name="PB" type="ParallaxBackground" parent="."]
+
+[node name="BG" type="ParallaxLayer" parent="PB"]
+scale = Vector2(1.1, 1.1)
+
+[node name="Bgg" type="Sprite2D" parent="PB/BG"]
+position = Vector2(-600, -400)
+texture = ExtResource("3_qsm1i")
+centered = false
+
+[node name="Bg" type="Sprite2D" parent="PB/BG"]
+position = Vector2(-790, -530)
+texture = ExtResource("2_pe30s")
+centered = false
+
+[node name="Dark" type="Sprite2D" parent="PB/BG"]
+material = SubResource("CanvasItemMaterial_ovd4w")
+position = Vector2(870, 619.091)
+texture = ExtResource("4_bay8w")
+
+[node name="Dead" type="Sprite2D" parent="PB/BG"]
+position = Vector2(800, -270)
+texture = ExtResource("5_j7pqb")
+centered = false
+
+[node name="Splat" type="Sprite2D" parent="PB/BG"]
+position = Vector2(370, 1200)
+texture = ExtResource("8_o3rij")
+centered = false
+
+[node name="Lamp" type="Sprite2D" parent="PB/BG"]
+position = Vector2(990, -380)
+texture = ExtResource("7_xwydh")
+centered = false
+
+[node name="Fore" type="Sprite2D" parent="PB/BG"]
+position = Vector2(-750, 160)
+texture = ExtResource("6_klidr")
+centered = false
+
+[node name="Character Positions" type="Node2D" parent="."]
+
+[node name="Opponent" type="Node2D" parent="Character Positions"]
+position = Vector2(125, 1177)
+
+[node name="Spectator" type="Node2D" parent="Character Positions"]
+position = Vector2(718, 787)
+
+[node name="Player" type="Node2D" parent="Character Positions"]
+position = Vector2(1306, 1070)

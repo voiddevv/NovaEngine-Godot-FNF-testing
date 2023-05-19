@@ -2,5 +2,5 @@
 
 [ext_resource type="Script" path="res://assets/songs/double kill/modchart.gd" id="1_t7vo4"]
 
-[node name="modchart" type="Node"]
+[node name="pissing" type="Node"]
 script = ExtResource("1_t7vo4")

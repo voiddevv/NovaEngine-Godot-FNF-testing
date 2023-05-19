@@ -1,9 +1,14 @@
-[gd_scene load_steps=11 format=3 uid="uid://nvkwreow4l8c"]
+[gd_scene load_steps=13 format=3 uid="uid://nvkwreow4l8c"]
 
 [ext_resource type="Script" path="res://scripts/Character.gd" id="1_ssqgk"]
 [ext_resource type="Texture2D" uid="uid://cb4g78s0nksa0" path="res://assets/images/gameplay/icons/icon-dad.png" id="2_ya4r5"]
 [ext_resource type="SpriteFrames" path="res://assets/images/gameplay/characters/black/blackdk.res" id="3_1rl5w"]
 [ext_resource type="Script" path="res://classes/AnimatedSprite.gd" id="4_voml8"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_drfos"]
+blend_mode = 1
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_cnejr"]
 
 [sub_resource type="Animation" id="Animation_epq6v"]
 resource_name = "idle"
@@ -272,12 +277,14 @@ _data = {
 }
 
 [node name="dkblack" type="Node2D"]
+material = SubResource("CanvasItemMaterial_drfos")
 script = ExtResource("1_ssqgk")
 sing_duration = 6.1
 health_icon = ExtResource("2_ya4r5")
 health_color = Color(0.686275, 0.4, 0.807843, 1)
 
 [node name="AnimatedSprite" type="AnimatedSprite2D" parent="."]
+material = SubResource("CanvasItemMaterial_cnejr")
 position = Vector2(-488, -658)
 sprite_frames = ExtResource("3_1rl5w")
 animation = &"idle"
