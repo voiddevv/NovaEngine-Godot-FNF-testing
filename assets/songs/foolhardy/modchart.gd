@@ -9,8 +9,15 @@ func _physics_process(delta):
 		game.camera.offset.y = sin(Conductor.step_crochet/1000.0 + Conductor.position/1000.0*2.0)*30.0
 		game.camera.offset.x = sin(Conductor.crochet/1000.0*4.0 + Conductor.position/1000.0*2.0)*250.0
 		for strum in game.cpu_strums.get_children():
+			if !strum is Receptor:
+				return 
+			strum = strum as Receptor
 			strum.position.y = sin(Conductor.position/1000.0*8.0 - strum.get_index())*30.0
+			strum.rotation_degrees = sin(Conductor.position / Conductor.crochet)*45
+#			strum.modulate.a = 0.2 + abs(sin(Conductor.position/1000.0*4.0 - strum.get_index()))
+			
 		for strum in game.player_strums.get_children():
+			strum.rotation_degrees = sin(Conductor.position / -Conductor.crochet)*45
 			strum.position.y = sin(Conductor.position/1000.0*8.0 - strum.get_index())*30.0
 
 			
@@ -21,6 +28,7 @@ func on_step_hit(step:int):
 			shakeing = true
 		2943:
 			shakeing = false
+			game.hud.
 			for node in game.hud.get_children():
 				if node is Node:
 								get_tree().create_tween().tween_property(node,"modulate:a",0.0,Conductor.crochet*4.0/1000.0).set_trans(Tween.TRANS_QUART).set_ease(Tween.EASE_OUT)
